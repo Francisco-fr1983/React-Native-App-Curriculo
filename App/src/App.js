@@ -12,6 +12,7 @@ import React from 'react';
 import {StyleSheet, View, Image, Text, TouchableOpacity, Alert} from 'react-native';
 import foto from './assets/foto.jpg';
 import Icon from 'react-native-vector-icons/Feather'
+import Card from './components/Card';
 
 const App = () => {
 
@@ -48,37 +49,12 @@ const App = () => {
               <Icon name = "linkedin" size={30} />
             </TouchableOpacity>
           </View>
-        </View>
-        
-        <View style={style.card_container}>
-          <View style={style.card}>
-            <View style={style.card_header}>
-              <Text>Experiencia Profissional</Text>
+        </View>      
 
-            </View>
-            <View style={style.card_content}>
-              <Text style={style.card_content_text}>Desenvolvedor KOTLIN</Text>
-              <Text style={style.card_content_text}>Desenvolvedor Frontend</Text>
-              <Text style={style.card_content_text}>Desenvolvedor React Native</Text>
-
-            </View>
-          </View>
-        </View>
-
-        <View style={style.card_container}>
-          <View style={style.card}>
-            <View style={style.card_header}>
-              <Text>Formação Academica</Text>
-
-            </View>
-            <View style={style.card_content}>
-              <Text style={style.card_content_text}>Gestão em TI</Text>
-              <Text style={style.card_content_text}>Engenharia de Software</Text>
-              <Text style={style.card_content_text}>Desenvolvedor React Native</Text>
-
-            </View>
-          </View>
-        </View>
+        <Card titulo='Experiência Profissional'/>  
+        <Card titulo='Formação Academica'/>
+        <Card />
+        <Card />   
 
       </View>
     </>
@@ -117,33 +93,8 @@ const Style = StyleSheet.create({
     justifyContent: 'space-between',
     width: '60%',
     marginTop: 20
-  },
-  card_container: {
-    width: '100%',
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginTop: 20    
+  } 
 
-  },
-  card: {
-    width: '60%',
-    borderRadius: 5,
-    borderWidth: 1,
-    borderColor: '#939393',
-    padding: 10,
-    backgroundColor: '#FFF'  
-
-  },
-  card_content: {
-    marginTop: 20,
-    color: '#939393'
-  },
-  card_content_text: {
-    color: '#939393',
-    marginBottom: 10
-
-  }
-
-});
+})
 
 export default App;
